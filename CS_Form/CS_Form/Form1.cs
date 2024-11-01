@@ -24,7 +24,7 @@ namespace CS_Form
             }*/
           for (int i = 0; i < 100; i++)
             {
-                TestButton testButton = new TestButton(i * 100, 10, 100, 100);
+                TestButton testButton = new TestButton(i,i%10*100, (i/10)*100, 100, 100);
                 Controls.Add(testButton);
             }
             

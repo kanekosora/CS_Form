@@ -14,22 +14,26 @@ namespace CS_Form
         //コンストラクタ
         //クラスを生成したときに呼び出される
 
-        public TestButton(int x, int y, int width, int height)
+        public TestButton(int id,int x, int y, int width, int height)
         {
             //ClickイベントにOnClick関数を登録
             //ボタンをクリックしたときに登録した関数を実行します
             Click += OnCliick;
 
-            Text = "餅";　//ボタン内の名前
+                Text = id.ToString();　//ボタン内の名前
+
 
             Location = new Point(x,y); //ボタンの位置
 
             Size = new Size(width,height); //ボタンのサイズ
         }
-
+        
         public void OnCliick(object sender, EventArgs e)
         {
-            MessageBox.Show("::|'''' ＼\r\n::| 、＿ ＼\r\n::|　(●)　＼\r\n::|人_)⌒:::: ｜\r\n::|⌒´　　／\r\n(⌒ー―′ )\r\n::|");
+            
+                MessageBox.Show($"{(Text)}::|'''' ＼\r\n::| 、＿ ＼\r\n::|　(●)　＼\r\n::|人_)⌒:::: ｜\r\n::|⌒´　　／\r\n(⌒ー―′ )\r\n::|");
+            
+            
 
         }
     }
