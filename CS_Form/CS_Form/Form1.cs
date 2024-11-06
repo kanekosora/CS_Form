@@ -22,11 +22,19 @@ namespace CS_Form
                     TestButton testButton  = new TestButton (x, 10, 50, 50);
                     Controls.Add(testButton);
             }*/
-          for (int i = 0; i < 100; i++)
+          for (int i = 0; i < 10; i++)
             {
-                TestButton testButton = new TestButton(i,i%10*100, (i/10)*100, 100, 100);
-                Controls.Add(testButton);
+                TestButton testButton = new TestButton(i,i%5*100, (i/5)*100, 100, 100);
+                Controls.Add(testButton);   
             }
+
+          Test_Label test_Label = new Test_Label("ラベルです", 10, 300, 100, 500);
+
+            /*Label label = new Label();
+            label.Location = new Point(39, 400);
+            label.Text = "ラベルです";*/
+
+            Controls.Add(test_Label);
         }
     }
 }
