@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace CS_Form
 {
+    
     public partial class Form1 : Form
     {
         Test_Label _test_Label;
@@ -18,20 +19,20 @@ namespace CS_Form
         {
             InitializeComponent();
 
-          /*  for(int x = 1;  x<= 100; x++)
+            /*  for(int x = 1;  x<= 100; x++)
+              {
+
+                      TestButton testButton  = new TestButton (x, 10, 50, 50);
+                      Controls.Add(testButton);
+              }*/
+            for (int i = 0; i < 10; i++)
             {
-                
-                    TestButton testButton  = new TestButton (x, 10, 50, 50);
-                    Controls.Add(testButton);
-            }*/
-          for (int i = 0; i < 10; i++)
-            {
-                TestButton testButton = new TestButton(this, i,i%5*100, (i/5)*100, 100, 100);
-                Controls.Add(testButton);   
+                TestButton testButton = new TestButton(this, i, i % 5 * 100, (i / 5) * 100, 100, 100);
+                Controls.Add(testButton);
             }
 
-          _test_Label =
-                new Test_Label("ラベルです", 10, 300, 100, 500);
+            _test_Label =
+                  new Test_Label("ラベルです", 10, 300, 100, 500);
 
             /*Label label = new Label();
             label.Location = new Point(39, 400);
@@ -43,12 +44,11 @@ namespace CS_Form
         /// ラベルの文字変更
         /// </summary>
         /// <param name="str"></param>
+        /// 
+
         public void LabelTextUodate(string str)
         {
-            _test_Label.TextUpdate("あ");
-
-            _test_Label.TextUpdate("i" +
-                "");
+            _test_Label.TextUpdate(str);
         }
 
     }

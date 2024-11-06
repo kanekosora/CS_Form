@@ -23,9 +23,9 @@ namespace CS_Form
             //ClickイベントにOnClick関数を登録
             //ボタンをクリックしたときに登録した関数を実行します
             Click += OnCliick;
-
-                Text = id.ToString();　//ボタン内の名前
-
+            string[] unk = new string[10] {"あ","い","う","え","お","か","き","く","け","こ"} ;
+            
+            Text = unk[id].ToString();　//ボタン内の名前
 
             Location = new Point(x,y); //ボタンの位置
 
