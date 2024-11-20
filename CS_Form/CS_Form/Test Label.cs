@@ -16,8 +16,7 @@ namespace CS_Form
         public Test_Label( string str, int x,
             int y, int width, int height)
         {
-
-            Text = str.ToString();　//ボタン内の名前
+            Text = str;　//ボタン内の名前
 
             Location = new Point(x, y); //ボタンの位置
 

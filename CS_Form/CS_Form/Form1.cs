@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -14,6 +15,9 @@ namespace CS_Form
     public partial class Form1 : Form
     {
         Test_Label _test_Label;
+
+        TestTextBox _textBox; 
+
 
         public Form1()
         {
@@ -32,13 +36,19 @@ namespace CS_Form
             }
 
             _test_Label =
-                  new Test_Label("ラベルです", 10, 300, 100, 500);
+                  new Test_Label("らべるです", 10, 300, 100, 500);
 
             /*Label label = new Label();
             label.Location = new Point(39, 400);
             label.Text = "ラベルです";*/
 
             Controls.Add(_test_Label);
+
+            _textBox = new TestTextBox(Text, 150, 300, 500, 100);
+
+                Controls.Add(_textBox);
+            
+            
         }
         /// <summary>
         /// ラベルの文字変更
