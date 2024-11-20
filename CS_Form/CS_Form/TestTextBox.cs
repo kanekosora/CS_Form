@@ -21,5 +21,13 @@ namespace CS_Form
             Size = new Size(width, height); //ボタンのサイズ
         }
 
+        public string TextReplacement(string str)
+        {
+            string tenp = Text;
+
+            Text = str;
+
+            return tenp;
+        }
     }
 }

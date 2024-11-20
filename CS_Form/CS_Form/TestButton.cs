@@ -34,6 +34,10 @@ namespace CS_Form
         
         public void OnCliick(object sender, EventArgs e)
         {
+            string t = _form1.ButtonLabelReplacement(Text);
+
+            Text = t;
+
             _form1.LabelTextUodate(Text);
         }
     }

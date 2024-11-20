@@ -47,8 +47,8 @@ namespace CS_Form
             _textBox = new TestTextBox(Text, 150, 300, 500, 100);
 
                 Controls.Add(_textBox);
-            
-            
+
+
         }
         /// <summary>
         /// ラベルの文字変更
@@ -60,6 +60,11 @@ namespace CS_Form
         {
             _test_Label.TextUpdate(str);
         }
+        public string ButtonLabelReplacement(string str)
+        {
+           string s = _textBox.TextReplacement(str);
 
+            return s;
+        }
     }
 }
